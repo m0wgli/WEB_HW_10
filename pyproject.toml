@@ -11,6 +11,8 @@ packages = [{include = "web_hw_10"}]
 python = "^3.11"
 django = "^4.2.4"
 pymongo = "^4.5.0"
+psycopg2-binary = "^2.9.8"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

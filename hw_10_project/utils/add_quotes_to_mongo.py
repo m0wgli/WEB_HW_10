@@ -1,20 +1,23 @@
 import json
-from bson.objectid import ObjectId
+import configparser
+from urllib.parse import quote_plus
 
 from pymongo import MongoClient
+from bson.objectid import ObjectId
+
 
 client = MongoClient('mongodb://localhost') 
 
-db = client.web_hw_8
+db = client.hw_8
 
 with open('quotes.json', 'r', encoding='utf-8') as fd:
     quotes = json.load(fd)
 
 
 for quote in quotes:
-    author = db.authors.find_one({'fullname': quote['author']})
+    author = db.author.find_one({'fullname': quote['author']})
     if author:
-        db.quotes.insert_one({
+        db.quote.insert_one({
             'quote': quote['quote'],
             'tags': quote['tags'],
             'author': ObjectId(author['_id'])
