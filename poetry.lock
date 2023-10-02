@@ -54,6 +54,16 @@ trio = ["trio (>=0.14,<0.23)"]
 wmi = ["wmi (>=1.5.1,<2.0.0)"]
 
 [[package]]
+name = "logging"
+version = "0.4.9.6"
+description = "A logging module for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417"},
+]
+
+[[package]]
 name = "psycopg2-binary"
 version = "2.9.8"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
@@ -267,4 +277,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1a27cc4fc0b80575cd62e751344fbc1d2f202b65528fe98c78684f18e8af3bb1"
+content-hash = "b878c24faa53fd66b0523cc3817cb519345ed08d083d3612342709a42344a932"
